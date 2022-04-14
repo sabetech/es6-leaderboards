@@ -1,8 +1,9 @@
 class Leaderboard {
     static scores = [];
-    static addScore(score){
-        this.scores.push(score);
-        Leaderboard.render();
+
+    static addScore(score) {
+      this.scores.push(score);
+      Leaderboard.render();
     }
 
     static refreshBoard() {
@@ -10,11 +11,11 @@ class Leaderboard {
     }
 
     static render() {
-        const list = document.querySelector('.scores');
-        list.innerHTML = "";
-        this.scores.forEach((score) => {
-            list.innerHTML += `<li>${score.name} ${score.score}</li>`
-        });
+      const list = document.querySelector('.scores');
+      list.innerHTML = '';
+      this.scores.forEach((score) => {
+        list.innerHTML += `<li>${score.name} ${score.score}</li>`;
+      });
     }
 }
 
