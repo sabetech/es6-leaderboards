@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.recent-scores-header {
+  display: flex;
+}
+
+.page {
+  display: flex;
+  justify-content: space-between;
+}
+
+.scores {
+  border: solid 3px black;
+}
+
+.scores-div {
+  margin-right: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-header {
+  margin: 0 0 20px 0;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+.submit {
+  width: 50%;
+  align-self: flex-end;
+}
+
+.recent-scores {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 20px;
+}
