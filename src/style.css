@@ -44,3 +44,17 @@ input {
   margin-bottom: 0;
   margin-right: 20px;
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  font-size: large;
+}
+
+li:nth-child(odd) {
+  background-color: rgb(170, 170, 170);
+}
