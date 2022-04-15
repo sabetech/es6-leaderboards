@@ -40,8 +40,8 @@ class Leaderboard {
         await fetch(`${this.baseUrl}games/${this.uuid}/scores/`, {
           method: 'POST',
           body: JSON.stringify({
-            user: score.name,
             score: score.score,
+            user: score.user,
           }),
           headers: {
             'Content-Type': 'application/json',
