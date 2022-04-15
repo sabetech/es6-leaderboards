@@ -2,7 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
-  font-family: Helvetica, Sans-Serif;
+  font-family: Helvetica, sans-serif;
 }
 
 .main {
@@ -10,12 +10,7 @@ body {
   margin: 0 5% 0 5%;
   padding: 80px;
   border-radius: 18px;
-  background: rgb(216, 238, 174);
-  background: linear-gradient(
-    90deg,
-    rgba(216, 238, 174, 1) 0%,
-    rgba(148, 233, 169, 1) 100%
-  );
+  background: rgba(148, 233, 169, 1);
 }
 
 #save_response {
@@ -27,6 +22,7 @@ input {
   font-size: medium;
   padding: 0.8em;
   line-height: 1em;
+  margin-bottom: 10px;
 }
 
 .refresh {
@@ -35,38 +31,27 @@ input {
   border: 0;
   border-radius: 100px;
   box-sizing: border-box;
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
   display: inline-flex;
-  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
-    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
-    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 600;
   justify-content: center;
   line-height: 20px;
   max-width: 480px;
   min-height: 40px;
-  min-width: 0px;
-  overflow: hidden;
-  padding: 0px;
+  min-width: 0;
+  padding: 0;
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
-  touch-action: manipulation;
-  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
 }
 
 .refresh:hover,
 .refresh:focus {
   background-color: #16437e;
-  color: #ffffff;
+  color: #fff;
 }
 
 .refresh:active {
@@ -106,10 +91,6 @@ form {
   margin: 0 0 20px 0;
 }
 
-input {
-  margin-bottom: 10px;
-}
-
 .submit {
   width: 50%;
   align-self: flex-end;
@@ -117,15 +98,14 @@ input {
   border: 0;
   border-radius: 100px;
   box-sizing: border-box;
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
   justify-content: center;
   line-height: 20px;
   min-height: 40px;
-  min-width: 0px;
-
+  min-width: 0;
   text-align: center;
   touch-action: manipulation;
 }
