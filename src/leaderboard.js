@@ -1,6 +1,4 @@
 class Leaderboard {
-    static scores = [];
-
     static baseUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 
     static uuid = '';
@@ -29,15 +27,15 @@ class Leaderboard {
       }
     }
 
-    static addScore(score) {
-      this.scores.push(score);
-      Leaderboard.saveScore(score);
-      Leaderboard.render();
+    static async addScore(score) {
+      const response = await Leaderboard.saveScore(score);
+      const r = await response.json();
+      return r;
     }
 
     static async saveScore(score) {
       try {
-        await fetch(`${this.baseUrl}games/${this.uuid}/scores/`, {
+        const response = await fetch(`${this.baseUrl}games/${this.uuid}/scores/`, {
           method: 'POST',
           body: JSON.stringify({
             score: score.score,
@@ -47,6 +45,8 @@ class Leaderboard {
             'Content-Type': 'application/json',
           },
         });
+        Leaderboard.refreshBoard();
+        return response;
       } catch (e) {
         throw e.message();
       }
@@ -61,17 +61,17 @@ class Leaderboard {
           },
         });
         const jsonresponse = await response.json();
-        this.scores = jsonresponse.result;
-        this.render();
+        const scores = jsonresponse.result;
+        Leaderboard.render(scores);
       } catch (e) {
         throw e.message();
       }
     }
 
-    static render() {
+    static render(scores) {
       const list = document.querySelector('.scores');
       list.innerHTML = '';
-      this.scores.forEach((score) => {
+      scores.forEach((score) => {
         list.innerHTML += `<li>${score.user} ${score.score}</li>`;
       });
     }
