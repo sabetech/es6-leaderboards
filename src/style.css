@@ -2,6 +2,67 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
+  font-family: Helvetica, sans-serif;
+}
+
+.main {
+  box-shadow: 8px 7px 19px -6px rgba(0, 0, 0, 0.76);
+  margin: 0 5% 0 5%;
+  padding: 80px;
+  border-radius: 18px;
+  background: rgba(148, 233, 169, 1);
+}
+
+#save_response {
+  color: blueviolet;
+}
+
+input {
+  border-radius: 18px;
+  font-size: medium;
+  padding: 0.8em;
+  line-height: 1em;
+  margin-bottom: 10px;
+}
+
+.refresh {
+  align-items: center;
+  background-color: #0a66c2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0;
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.refresh:hover,
+.refresh:focus {
+  background-color: #16437e;
+  color: #fff;
+}
+
+.refresh:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, 0.7);
+}
+
+.refresh:disabled {
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .recent-scores-header {
@@ -30,13 +91,23 @@ form {
   margin: 0 0 20px 0;
 }
 
-input {
-  margin-bottom: 10px;
-}
-
 .submit {
   width: 50%;
   align-self: flex-end;
+  background-color: #0a66c2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  min-height: 40px;
+  min-width: 0;
+  text-align: center;
+  touch-action: manipulation;
 }
 
 .recent-scores {
@@ -48,6 +119,8 @@ input {
 ul {
   list-style: none;
   padding: 0;
+  border-radius: 18px;
+  box-shadow: 8px 7px 19px -6px rgba(0, 0, 0, 0.76);
 }
 
 li {
@@ -55,6 +128,6 @@ li {
   font-size: large;
 }
 
-li:nth-child(odd) {
+li:nth-child(even) {
   background-color: rgb(170, 170, 170);
 }
